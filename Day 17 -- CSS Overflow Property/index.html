@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Property</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 20vh;
+            border: 2px solid black;
+            /* overflow: scroll; */
+            /* this overflow : scroll; property make horizontal and vertical scroll inside box and using the scroll we can see the whole overflown content  */
+            /* overflow: auto; */
+            /* this overflow: auto; property apllies when the overflown the border it automatically enable the scroll around the box ,if the content is not overflown then there will be not scroll */
+            /* overflow: hidden; */
+            /* using  overflow: hidden; property we can hide overflow content */
+            /* overflow: clip; */
+            /* overflow: clip; property is similar to hidden property the only difference is clip is clipped all the overflown content and make the overflown content placed the next line */
+            /* white-space: nowrap; */
+            /* using this white-space: nowrap; property make the whole content become a single line means there will be not vertical content the content itself becoe horizontal content and a horizontal scroll will appear at the bottom of the box */
+            /* text-overflow: ellipsis; */
+            /* using text-overflow: ellipsis; property make the overflown content as dotted, but this properthy needs more two propert to work overflow: auto/scroll/hidden; and white-space: nowrap; -->> this two property needs to work text-overflow: ellipsis; property */
+            overflow-x: hidden;
+            overflow-y: scroll;
+            /* we can controll the horizontal and vertical scroll using overflow-x and overflow-y,, if we give overflow-x: hidden; then horizontal scroll will be hidden ,if we give overflow-y: scroll; then only vewrtical scroll will be showing */
+            overflow: hidden auto;
+            /* using overflow: hidden auto;-->> that way we can easily mention the overflow-x & overflow-y together (overflow: x y;) */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis culpa dolorum eligendi labore praesentium assumenda sunt autem sit illum aspernatur doloremque quibusdam ex, ea deleniti doloribus itaque amet incidunt, eius quis dolorem quas! Id nam assumenda consequatur, vitae impedit, aliquid commodi eligendi ducimus doloribus minus repudiandae quasi, eaque ipsum dolorum.
+    </div>
+</body>
+</html>
+<!-- overflow occurs when the content overflowing the border means the border is respect to the content is become small -->

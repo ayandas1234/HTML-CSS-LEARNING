@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .container{
+            background-color: rgb(71, 163, 62);
+            width: 30vw;
+            height: 80vh;
+        }
+        .box{
+            width: 34px;
+            height: 45px;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; -->> to make animation we have to give this peoperty vale to the animation syntax */
+            animation-name: ayananimation;
+            animation-duration: 3s;
+            /* animation-duration: 3s; -->> The animation-duration CSS property sets the length of time that an animation takes to complete one cycle. */
+
+            animation-iteration-count: 2;
+            /* animation-iteration-count: infinite; */
+            /* animation-iteration-count: 2; -->> The animation-iteration-count CSS property sets the number of times an animation sequence should be played before stopping. */
+
+            animation-timing-function: cubic-bezier(1, 0.3, 0.74, 1);
+
+            animation-delay: 1s;
+            /* animation-delay: 2s; -->> after 2seconds animation will start woking */
+
+            animation-direction: reverse;
+            /* animation-direction: reverse; -->> the animatio will happen in opposite direction */
+
+            animation-direction: alternate-reverse;
+            /* animation-direction: alternate-reverse; -->> this animation will go forward and backword direction */
+
+            animation-play-state: paused;
+            /* animation-play-state: paused; -->> a running animation will be paused ,,, if we wat to pause a running animation then we used paused ,, also we can make an animation paused at any desired position or any running state */
+
+            /* we can use a shortcut of animation where we can group the all the animation property -->>the syntax will be */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: ayananimation 2s ease-in-out 1;
+
+            /* animation: ayananimation 2s ease-in-out 1; -->> if we want to use the selected property of animation that also can be done like this here we didn't mention delay , direction and fill-mode still this syntax will work */
+
+
+            /* Fill-Mode */
+            /* By deafult animation fill mode is none */
+            animation: ayananimation 2s ease-in-out 1 ;
+            /* animation: ayananimation 2s ease-in-out 1 ; -->> after 1 we give a space and left it without any property this will treat as fill-mode "none" */
+
+            /* 
+            The animation-fill-mode property can have the following values:
+
+            none - Default value. Animation will not apply any styles to the element before or after it is executing
+
+            forwards - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+            
+            backwards - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+            
+            both - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions
+             */
+
+             animation: ayananimation 3s ease-in-out 1 forward;
+             /* animation: ayananimation 3s ease-in-out 1 forward; -->> here when box go to forward it will stay there and remain it's style and don't come back it's initial position */
+
+             animation: ayananimation 2s ease-in-out 3s 1 backwards;
+             /* animation: ayananimation 2s ease-in-out 3s 1 backwards; -->> in this synyax after going forward it came back to it's initial position then after 3 seconds it will lost all it's styles */
+        }
+        @keyframes ayananimation {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow;
+                transform: translateX(1000px);
+            }
+        }
+        /* whatever animation rule we write everuthing wiill be inside the @keyframe rule and with the @keyframe rule we have to give an animarion namme that can be anything like here we give ayananimation */
+
+        /* in "form" we write from where to where it will be start or what it was look like at the begining */
+        /* in "to" we write where it will be ending or what it was look like at the ending */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+
+    <div class="resources"></div>
+        <div><a href="https://www.w3schools.com/css/css3_animations.asp">CSS Animation</a></div>
+        <div><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">CSS Animation</a></div>
+        
+    </div>
+</body>
+</html>

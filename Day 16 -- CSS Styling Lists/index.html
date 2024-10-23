@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Lists</title>
+    <style>
+        nav ul li{
+            /* list-style: none; */
+            /* if we use the property list-style: none; then before the content have a marker (circle dot) it will be removed */
+            /* also we can change the style of the marker (circle dot) before the conent using list-style */
+
+            list-style: devanagari;
+            background-color: yellow;
+            list-style-position: inside;
+            /* if we don't us the property of list-style-position: inside; then if we style the list it will only styled the content not he marker ,, but if we give the property of list-style-position: inside; then whatever style apply on the content it also apply on the marker as well */
+
+            border: 2px solid black;
+            /* list-style-image: url("033.gif"); */
+            /* using list-style-image property we can replace the marker bulletin with image */
+            /* list-style-type: "\1F44D"; */
+            /* using list-style-type: "\1F44D"; property we can can replace the marker bulletin with emoji */
+            list-style: disc inside url("033.gif");
+            /* using this property means if disc and inside will be working together or inside and url, if disc shows on the website then url will not be showing and if url is showing then disc will not be showing */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <!-- li display property by deafult is list-item it means there would be a marker (circle dot)  and the cotent together -->
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>

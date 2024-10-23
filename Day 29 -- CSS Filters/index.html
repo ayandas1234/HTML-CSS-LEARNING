@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+    <style>
+        .img1{
+            /* filter: blur(5px); */
+        }
+        .img1{
+            filter: brightness(200%);
+
+            /* we can make group of filters like transform and animation */
+            filter: brightness(176%) contrast(87%);
+            filter: brightness(176%) contrast(1.9);
+        }
+        .img2{
+            filter: invert(0.6);
+            filter: invert(1);
+
+            filter: opacity(1);
+            /* filter: opacity(1); -->> if the opacity is 1 then immage will be seen as normal there will be no transparent */
+
+            filter: opacity(0.1);
+        }
+        .img3{
+            filter: grayscale(100%);
+            filter: sepia(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img1" src="./programming-background-with-person-working-with-codes-computer_23-2150010125.jpeg" alt="">
+
+        <img class="img2" src="./154fgjlg_shah-rukh-khan-_625x300_23_September_23.jpg" alt="">
+
+        <img class="img3" src="./akshay_kumar_1659860706633_1668255913307_1668255913307.avif" alt="">
+    </div>
+
+    <div class="resources"></div>
+        <div><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter">css filters</a></div>
+        <div><a href="https://www.w3schools.com/cssref/css3_pr_filter.php">css filters</a></div>
+    </div>
+</body>
+</html>

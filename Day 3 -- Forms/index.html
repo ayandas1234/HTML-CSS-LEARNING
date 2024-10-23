@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froms -- lets learn it</title>
+</head>
+<body>
+    <!--form method="get" is Default. Appends the form-data to the URL in name/value pairs: URL?name=value&name=value, means in the URL of the browser user form data will be showing-->
+
+    <!--form method="post" is Sends the form-data as an HTTP post transaction means in the URL of the browser user form data will be hidden  -->
+
+    <!--we can't send password through get method for that we need post method-->
+    <form action="" method="post">
+        <!--div tag is a empty block element-->
+        <div>
+            <label for="username">Enter Your Name</label>
+            <input type="text" name="username" id="username" placeholder="Enter Your Name" autocomplete="off" autofocus>
+            <!--autocomplete="off" in input tag will disable the autosuggestion / autocomplete feature in browser-->
+
+            <!--autofocus automatically tag the  input field as focused when page loads -->
+        </div>
+
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <!--input tag "id" and label "for" should be same, it connect the radio button and the label suppose if i select the label in the browser then respective option with label also be selected-->
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <div>
+            <input type="checkbox" name="subscribe" id="subscribe" value="yes">
+            <label for="subscribe">subscribe my channel</label>
+        </div>
+
+        <div>
+            <label for="comment">Enter your Commment</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+            <select name="fruits" id="" placeholder="Choose fruites">
+                <option value="apple">Apple</option>
+                <option value="bannana">Bannana</option>
+                <option value="cheery">Cheery</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>

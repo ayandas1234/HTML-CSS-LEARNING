@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+    <style>
+        /* *{
+            padding: 0;
+            margin: 0;
+        } */
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(242, 176, 238);
+            border: 2px solid black;
+            transform: rotate(45deg);
+            /* transform: rotate(45deg); -->> This property rotates the content of the division either anticlockwise or clockwise acc to the degree of rotation. The values are taken in degree and on adding a negative sign the rotation becomes anticlockwise. */
+
+            transform: rotate(0.25turn);
+            /* transform: rotate(0.25turn); -->> it rotate 90 degree */
+
+            transform: rotate(0.5turn);
+            /* transform: rotate(0.5turn); -->> it rotate 180 degree */
+
+            transform: rotateX(45deg);
+            /* The rotateX() method rotates an element around its X-axis at a given degree. */
+
+            transform: rotateY(95deg);
+            /* The rotateY() method rotates an element around its Y-axis at a given degree. */
+
+            transform: rotateZ(35deg);
+            /* The rotateZ() method rotates an element around its Z-axis at a given degree. */
+
+            transform: scale(1.6);
+            /* transform: scale(1.6); -->> This property rescales the width and height of the division in the ratio to the original dimensions. */
+
+            transform: scaleX(1.6);
+            /* transform: scaleX(1.6); -->> The scaleX() method increases or decreases the width of an element in X axis. */
+
+            transform: scaleY(1.6);
+            /* transform: scaleY(1.6); -->> The scaleY() method increases or decreases the width of an elementin Y axis. */
+            
+            transform: scaleZ(1.6);
+            /* transform: scaleZ(1.6); -->> The scaleZ() method increases or decreases the width of an elementin Z axis. */
+
+            /* The scale3d() CSS function defines a transformation that resizes an element in 3D space. Because the amount of scaling is defined by a vector [sx, sy, sz], it can resize different dimensions at different scales. */
+
+            /* The scale3d() function is specified with three values -->> scale3d(sx, sy, sz) */
+
+            transform: skew(5deg);
+            /* transform: skew(5deg); -->> This property helps in adding a slant or skew to division. (Skew: A pair of lines neither intersecting nor parallel) */
+
+            transform: skewX(39deg);
+            /* The skewX() method defines a transformation that skews an element along the X-axis. */
+
+            transform: skewY(39deg);
+            /* The skewY() method defines a transformation that skews an element along the Y-axis. */
+
+            /* THERE IS NO skewZ() only skewX() & skewY() exits */
+
+            transform: translateX(34px);
+            transform: translateY(34px);
+            /* The translate property allows you to change the position of elements. */
+
+            /* The translate property translateX() & translateY() defines change of position in x- and y-coordinates of an element in 2D */
+
+            transform: translateX(34%);
+            transform: translateX(100%);
+
+            /* group of transform property */
+            transform: translateY(100%) skewX(40deg) translateX(45%);
+            /* transform: translateY(-100%) skewX(40deg) translateX(45%); -->> -100% uses for hiding nav bar */
+
+            transform: rotate(0.125turn);
+            /* transform: rotate(0.125turn); -->> it rotate 45 degree */
+
+            /* transform-origin: -50 -50; */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 80vh;
+            width: 100vh;
+            border: 2px solid rgb(36, 13, 208);
+        }
+    </style>
+</head>
+<body>
+    <!-- Transforms basically two types 2D and 3D ,, in 2D Transforms we can change anything in two diensional space x & y,, in 3D Transforms we can manipulate anything in three diensional space x , y &z-->
+
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+</html>

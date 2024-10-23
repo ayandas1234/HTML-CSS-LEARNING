@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 12px;
+}
+.box{
+    box-sizing: border-box;
+    border: 2px solid rebeccapurple;
+    /* width: 233px; */
+    width: 80vw;
+    height: 10vh;
+    /* vw means viewport width if we use the units vw & vh then the size will be responsive according to devices, and the size will be taken is 80 vw means out of 100 it will taken 80% of viewport width */
+    margin: auto;
+    /* margin auto means left and right side have equal margin and the element placed at center only for blocked elements ,but inline elements case the elements doesn't placed at center */
+    background-color: aquamarine;
+}
+
+.container{
+    box-sizing: border-box;
+    border: 2px solid rebeccapurple;
+    /* width: 233px; */
+    width: 80vw;
+    height: 80vh;
+    margin: 23px auto;
+    /* 23px is the top and bottom margin , auto means laft and right margin */
+    /* whenever we need to separate horizontal  & vertical margin we just use the space b/w horizontal  & vertical margin*/
+    background-color: aquamarine;
+    font-size: 36px;
+    /* deafult font size is 16px */
+}
+.container p{
+    font-size: 2em;
+}

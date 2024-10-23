@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        html{
+            font-size: 12px;
+        }
+
+        .box{
+            box-sizing: border-box;
+            border: 2px solid rebeccapurple;
+            /* width: 233px; */
+            width: 80vw;
+            height: 10vh;
+            /* vw means viewport width if we use the units vw & vh then the size will be responsive according to devices, and the size will be taken is 80 vw means out of 100 it will taken 80% of viewport width */
+            margin: auto;
+            /* margin auto means left and right side have equal margin and the element placed at center only for blocked elements ,but inline elements case the elements doesn't placed at center */
+            background-color: aquamarine;
+        }
+
+        .container{
+            box-sizing: border-box;
+            border: 2px solid rebeccapurple;
+            /* width: 233px; */
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            /* min-height or min-width make sure a minimum height and width mmaintain even if there is no cotain or less contain but there is no limit if the content exceed the height or width then the height and width increase accrodingly */
+            margin: 23px auto;
+            /* 23px is the top and bottom margin , auto means laft and right margin */
+            /* whenever we need to separate horizontal  & vertical margin we just use the space b/w horizontal  & vertical margin*/
+            background-color: aquamarine;
+            /* font-size: 16px; */
+            /* deafult font size is 16px */
+        }
+        .container p{
+            /* font-size: 2em; */
+            font-size: 2rem;
+        }
+
+        .mycont{
+            box-sizing: border-box;
+            margin: 23px auto;
+            border: 2px solid rgb(14, 14, 14);
+            /* background-color: red; */
+            color: rgb(18, 18, 18);
+            font-size: 22px;
+            /* width: 100vh; */
+            /* width: 100vmin; */
+            /* 100vh means viewport height, for pc vh and vmin are same, vmin in pc treat as height */
+            width: 80vw;
+        }
+
+        .container2{
+            box-sizing: border-box;
+            border: 2px solid rebeccapurple;
+            width: 80vw;
+            min-height: 80vh;
+            margin: 23px auto;
+            background-color: aquamarine;
+        }
+
+        /* Child Selector */
+        .container2 > div{
+            font-size: 2em;
+            border: 2px solid red;
+            width: 50%;
+            /* the percentage unit apply on parent means div is inside another div which class is container2 so the 50% apply on the initial div which have a class and the contain reside within this 50% */
+        }
+
+        /* Child Selector */
+        .container2 > div > div{
+            border: 2px solid rgb(25, 0, 255);
+            width: 50%;
+        }
+        /* here also the 50% apply on the 2nd div which is in the middle and the contain reside within that 50% only */
+    </style>
+</head>
+<body>
+    <div class="box">
+        this is a box, pixel (px) is a unniversal unit
+    </div>
+
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem iusto id nostrum officia explicabo aperiam temporibus quidem porro corrupti, laudantium similique consequuntur facilis quod consectetur dignissimos doloremque qui in ea?
+        </p>
+    </div>
+
+    <div class="mycont">
+        i'm another container
+    </div>
+
+    <div class="container2">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis corporis, facere culpa at quos esse! Officia, suscipit placeat corporis facilis, quos unde aliquam excepturi laudantium ex enim eos, dolorum et recusandae facere laboriosam quia non esse molestiae incidunt? Quia consequatur distinctio, minus veritatis neque eos repellendus esse et maiores cumque!
+
+            <div>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam magnam nostrum excepturi vel tempora incidunt laboriosam natus labore. Dicta, accusantium?
+            </div>
+        </div>
+    </div>
+</body>
+<!-- in phone vmin will be width but in vmin will be height -->
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex Box</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            display: flex;
+            /* by deafult flex box become left to right means it represent the content in horisontal format */
+            height: 80vh;
+            /* justify-content: center; */
+            /* justify-content: center -->> it makes the contet placed to the center respect to horizontally */
+            align-items: center;
+            /* align-items: center -->> it makes the contet placed to the center respect to vertically */
+
+            /* align items and justify content have some flex property we will now explore those-->> */
+            /* justify-content: flex-end; */
+            /* flex-end make the cotent place at the end of the page respective to horizontally */
+            /* justify-content: flex-start; */
+            /* flex-start make the cotent place at the start of the page respective to horizontally */
+
+            /* justify-content: right; */
+            /* justify-content: left; */
+            /* justify-content: left / right; make the cotent place at the left / right of the page respective to horizontally */
+
+            /* justify-content: space-around; */
+            /* justify-content: space-around -->> make every small box have equal space around it's */
+
+            /* justify-content: space-between; */
+            /* justify-content: space-between -->> make every small box have equal space between each other, not around */
+
+            /* justify-content: space-evenly; */
+            /* justify-content: space-evenly -->> make every small box have evenly space around it's */
+
+            /* ************************-----------------------------------******************* */
+
+            /* align-items: flex-end; */
+            /* align-items: flex-end;  -->> it make the small box placed at the end respective to vertical */
+
+            /* align-items: flex-start; */
+            /* align-items: flex-start; -->> -->> it make the small box placed at the start respective to vertical */
+
+            /* align-items: baseline; */
+            /* align-items: baseline; -->> Items are positioned at the baseline of the container it is little bit similar to flex-start but baseline doesn't positioned at the start */
+
+            /* -----------------*****************************--------------------************ */
+
+            /* flex direction is by deafult left to right in horizontally */
+
+
+            /* flex-direction: column; */
+            /* flex-direction: column; -->> it mmake the content column wise */
+
+            /* flex-direction: column-reverse; */
+            /* flex-direction: column-reverse; -->> it make the column reverse means, 1st box go to bottom over this 2nd box and go on */
+
+            /* flex-direction: row; */
+            /* flex-direction: row; -->> it make the boxes row wise which is a deafult setting */
+
+            /* flex-direction: row-reverse; */
+            /* flex-direction: row-reverse; -->> this make the roe revese means 1st items go to last and last items go to first */
+
+
+            /*-------------------*************************************------------------------*/
+
+            /* flex wrap is a property of flex where the overflow element or excessive element come down to next row */
+
+            /* by deafult flex wrap is nowrap */
+
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* wrap-reverse make the last box elemet placed at first and first elements placed at last */
+
+            /* flex-wrap: nowrap; */
+
+            /* align-content: center; */
+            /* align-content: flex-start; */
+            /* when there is more than one row or line then we use align-content , and for single line we use align-items */
+
+            /* flex-flow: row wrap-reverse; */
+            /* The flex-flow property is a sub-property of the flexible box layout module and also a shorthand property for flex-wrap and flex-direction. */
+
+            /* syntax -->> flex-flow: flex-direction flex-wrap; */
+
+            /* gap: 30px; */
+            /* gap applies on both horizontal and vertically between elements , here is aplly between small boxes */
+
+            /* column-gap: 10px; */
+            /* row-gap: 20px; */
+            /* we can separately control the gap between row and column using column-gap and row-gap */
+
+            gap: 40px 10px;
+            /* gap: row-gap column-gap; -->> this is the shortcut of usiing both row gap and column gap */
+        }
+        .item{
+            flex-grow: 1;
+            /* by deafult flex-grow is "0" zero, mentioning flex-grow: 1; means all the items take the flex grow as 1 respective to container then take wholde width of the container and adjust ammong each other*/
+            height: 92px;
+            width: 92px;
+            background-color: royalblue;
+            /* margin: 4px; */
+            border: 2px solid black;
+            font-size: 30px;
+        }
+
+        .order-1{
+            order: 1;
+        }
+        
+        .order-2{
+            order: 2;
+        }
+
+        .order-3{
+            order: 3;
+        }
+
+        /* using order we can make a particular element placed at last, which elemment order will be greater than other element then that element will be placed at the end */
+
+        /* by deafult everyone's order is '0'(zero) */
+
+        /* .item1{ */
+            /* flex-grow: 2; */
+            /* The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside the same container. */
+        /* } */
+
+        .item1{
+            flex-shrink: 2;
+            /* The flex-shrink property specifies how the item will shrink relative to the rest of the flexible items inside the same container. */
+
+            /* suppose if the user screen is small then this item will shring until it's let adjust the other element */
+
+            /* there is no limit to it's shrink */
+        }
+
+        .item1{
+           align-self: flex-end;
+        }
+        .item9{
+           align-self: flex-start;
+        }
+
+        /* The align-self property specifies the alignment in the block direction for the selected item inside a flexbox or grid container. or it's overwrite a particular elemnt position using align-self */
+    </style>
+    <style>
+        .resource1{
+            border: 2px soliid black;
+            height: 50vh;
+            width: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item">2</div>
+            <div class="item order-1">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item item9">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <!-- <div class="item">15</div>
+            <div class="item">16</div>
+            <div class="item">17</div>
+            <div class="item">18</div>
+            <div class="item">19</div>
+            <div class="item">20</div> -->
+            <!-- <div class="item">21</div>
+            <div class="item">22</div>
+            <div class="item">23</div>
+            <div class="item">24</div>
+            <div class="item">25</div>
+            <div class="item">26</div> -->
+        </div>
+
+        <div class="resource1">
+            <h1>Online Resources for Flex Box</h1>
+            <div class="resource"><a href="https://www.w3schools.com/cssref/css3_pr_align-self.php">align-self</a></div>
+            <div class="resource"><a href="https://www.w3schools.com/cssref/css3_pr_align-items.php">align-items</a></div>
+            <div class="resource"><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_align-self&preval=auto">align-self</a></div>
+            <div class="resource"><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_flex-direction&preval=column-reverse">flex-direction</a></div>
+            <div class="resource"><a href="https://www.w3schools.com/CSSref/css3_pr_flex-shrink.php">flex-shrink</a></div>
+            <div class="resource"><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_align-items&preval=baseline">align-items</a></div>
+            <div class="resource"><a href="https://www.w3schools.com/CSSref/tryit.php?filename=trycss3_flex-grow">flex-grow</a></div>
+            <div class="resource"><a href="https://www.w3schools.com/CSSref/playdemo.php?filename=playcss_flex-wrap&preval=wrap">flex-wrap</a></div>
+    </main>
+</body>
+</html>

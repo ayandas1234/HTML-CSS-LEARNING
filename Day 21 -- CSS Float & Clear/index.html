@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+            /* if we use the  */
+        }
+        img{
+            float: left;
+            float: right;
+            /* using float property "left" make the image float to the left side of the screen and make space for the right side of the image and the after content of iage can mmake their way to the right side of the image */
+        }
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: right;
+            /* using clear right means 3rd child/ div don't want any floting elemnt to its right side only */
+            clear: both;
+            /* if we use clear property both then from both side there will be no floating elemnts */
+        }
+    </style>
+</head>
+<body>
+    <!-- .cards>.card*3 -> is the sort cut of aking a cards div class and three card div class -->
+    <!-- <div class="cards">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div> -->
+
+    <div class="cards">
+
+        <img src="./31189.jpg" alt="Nature Image" width="230px">
+
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit, alias neque, animi vel error, consectetur placeat aliquid repellendus beatae praesentium. Accusamus totam praesentium repudiandae hic, maiores molestiae deserunt assumenda!</div>
+
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem hic voluptas voluptatum neque consectetur atque. Nisi repellendus vitae magni molestiae dolor. Unde obcaecati id tenetur repudiandae odit voluptatibus minus, quibusdam temporibus cum earum. Earum nisi amet voluptates harum commodi eaque iusto error velit autem aliquam perferendis architecto et adipisci facere debitis rem sunt nostrum laborum atque dolorum eum, laudantium, magni excepturi molestiae? Porro ex obcaecati inventore cumque error corrupti aut quibusdam animi consequatur, illum consequuntur ullam laboriosam. Adipisci laborum corrupti perspiciatis accusantium tenetur doloremque? Architecto pariatur ipsa voluptas officiis fugiat qui facilis illum, molestiae quod eaque neque enim labore magni voluptatibus dolorem deserunt explicabo. Eaque reprehenderit vero cupiditate deleniti doloremque eveniet omnis, eligendi sit laudantium corporis. Illum nobis ipsam est reprehenderit quidem soluta quas et laboriosam, facere quisquam. Nobis mollitia repellendus eaque earum enim consequatur sunt aut temporibus, sint odit dolore et cumque deleniti quo aspernatur nemo quidem ut distinctio accusamus doloremque. Assumenda ab recusandae perspiciatis quae eum, atque esse adipisci facilis natus, veritatis exercitationem dolores, ipsum ex aliquam est illo rerum provident quam? Rerum excepturi non nihil ipsa omnis assumenda! Asperiores iure ad at reiciendis, tempore soluta quis, mollitia unde quia aperiam corporis a accusamus ipsa repellat reprehenderit provident ab quaerat eos quidem libero voluptates dignissimos aut? Repellat illo fugiat earum. Rerum a nesciunt neque incidunt, mollitia tenetur, excepturi, aliquid tempore quos qui aut quidem. Accusantium, distinctio. Maiores voluptate quos non recusandae totam numquam quibusdam perferendis dolorem assumenda temporibus facilis omnis obcaecati odio vero vitae consequatur suscipit natus explicabo ex sunt, doloribus neque quam molestias! Harum impedit provident laudantium, saepe quo mollitia excepturi quibusdam quae sint laborum. Pariatur rerum voluptate magnam enim asperiores, quibusdam labore dolores esse vel. Ea, iste. Assumenda consequuntur odit nobis exercitationem ut maiores dolorum soluta qui a praesentium iusto itaque quos quo, culpa repellat aspernatur!</div>
+
+        <div class="card">card 3</div>
+    </div>
+</body>
+</html>

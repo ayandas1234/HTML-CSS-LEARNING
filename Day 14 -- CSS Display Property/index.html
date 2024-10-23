@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        /* https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+        /* we can chage a block element into  a inline elemnet usinng display property */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid blue;
+            /* display: inline; */
+            /* inline element doesn't apply width, also padding & margin applies only left , right , bottom not the top ,,so to resolve this problem we have to use inline block elemnt */
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+        }
+
+        .box1{
+            /* display: none; */
+            /* using display property "none" make the box element disappear totally */
+
+            /* visibility: hidden; */
+            /* using visibility property "hidden" make the box element hidden but it's space still will be present in the browser */
+
+            /* display: flex;
+            justify-content: center; */
+
+            /* display: grid; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        i am a box
+    </div>
+
+    <div class="box box2">
+        also a nice box
+    </div>
+
+    <span>i am a good</span>
+    <span>boy</span>
+</body>
+</html>

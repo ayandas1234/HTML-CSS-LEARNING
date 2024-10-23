@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /* declaring global variables under root*/
+        :root{
+            /* declare variable process -->> --variable name:variable propperty */
+            --color:rgb(192, 69, 211);
+            --secolor:rgba(28, 216, 191, 0.948);
+            --border:rgb(241, 207, 11);
+            --depadding:15px;
+            --deopacity:0.2;
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav{
+            /* using variable through var function */
+            background-color: var(--color);
+        }
+
+        .container{
+            background-color: var(--secolor);
+        }
+
+        ul{
+            display: flex;
+        }
+
+        ul li{
+            list-style: none;
+            /* padding: 15px; */
+            padding: var(--depadding);
+            border: 9px solid var(--border);
+            /* opacity: 0.2; */
+            opacity: var(--deopacity);
+        }
+
+        /* under ul aong li which is first that's background color will be changed */
+        ul li:first-child{
+            /* under root we declare a variable named --color, here we alsodeclare a variable name --color but this color is treat as a local variable it didn't affect the global variable under the root,,so there variable namme is samme butthey both are different and represent different color */
+            --color:rgb(208, 109, 43);
+            background-color: var(--color);
+            /* background-color: var(--color,red); */
+            /* background-color: var(--color,red); -->> this syntax means suppose there is no variable named as --color so automatiically background color applied as red */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora facilis esse deserunt iure cumque quisquam nemo nam rerum quibusdam minima sunt ullam numquam magnam veritatis quis at, aperiam, nisi sequi perspiciatis. Repudiandae consequatur eveniet voluptatibus, quibusdam corporis accusamus qui amet a dolor perspiciatis, enim dolorum!
+    </div>
+</body>
+</html>

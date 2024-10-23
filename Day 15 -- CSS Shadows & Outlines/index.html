@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows & Outlines</title>
+    <style>
+        .box{
+            border:2px solid black;
+            padding: 34px;
+            box-shadow: 5px 5px 15px 5px #2f0aa8;
+            /* box shadoe sytax is,, to mmake bos shadow outside of the box we use this syntax --->>> */
+            /* box-shadow: h-offset v-offset blur spread color; */
+
+            /* box shadoe sytax is,, to mmake bos shadow inside of the box we use this syntax after color just write "inset" or at the beginning before h-offset write "inset" --->>> */
+            /* box-shadow: h-offset v-offset blur spread color inset; */
+            /* box-shadow: inset h-offset v-offset blur spread color; */
+            /* h-offset and v-offset: Determines the shadow's horizontal and vertical position. */
+            /* blur: The larger the value, the blurrier the shadow. */
+            /* spread: Expands or shrinks the shadow size. */
+            /* color: Defines the shadow color. */
+            /* inset: Makes the shadow inner. */
+        }
+
+        .text-element { 
+            text-shadow: 5px 5px 2px #ac2a56;
+            outline: 2px solid blue;
+            /* An outline is a line that is drawn around elements, outside the borders, to make the element "stand out" */
+            border: 2px solid green;
+            border-radius: 8px;
+            /* using border radius we can curve the edges of border as well as outlines */
+            /* we can't chage border width but outline widthcan chage using outline-offset */
+            outline-offset: 20px;
+        }
+        /* text shadow used for giving text shadow ,, the syntax will be -->> */
+        /* text-shadow: h-offset v-offset blur color; */
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        i am a box
+    </div>
+
+    <p class="text-element">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, tempora nam sit ipsa voluptatum placeat doloribus ex totam nobis, odit molestias sed. Laboriosam aliquid ab voluptate? Molestias architecto porro quis dolore aperiam accusamus? Ipsum voluptatibus nobis, rerum quisquam illo voluptatem neque porro repudiandae sunt facilis dolore. Iure dolore incidunt numquam!
+    </p>
+</body>
+</html>

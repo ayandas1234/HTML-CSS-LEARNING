@@ -1,0 +1,13 @@
+/*in style sheet we mention class using Dot (.) */
+.red{
+    background-color: red;
+}
+
+/* .bg-yellow{
+    background-color: yellow;
+} */
+
+#seconddiv{
+    background-color: greenyellow;
+}
+/*in style sheet we mention id using selector (#) */

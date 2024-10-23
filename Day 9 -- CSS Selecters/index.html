@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS IN CSS</title>
+
+    <style>
+        /* Element selector */
+        div{
+            background-color: blueviolet;
+        }
+
+        /* Class selector */
+        .red{
+            background-color: red;
+        }
+
+        /* Id selector */
+        #green{
+            background-color: rgb(11, 232, 106);
+        }
+
+        /* Child Selector */
+        div > p{
+            color: rgb(9, 9, 9);
+            background-color:blueviolet;
+        }
+        /* in child selector if p tag is directly under div tag then it will apply on*/
+
+        /* Decendent Selector */
+        div  p{
+            color: rgb(9, 9, 9);
+            background-color:rgb(36, 10, 183);
+        }
+        /* in decendent selector whenever p is reside in a div tag is it directly under or not doesn't matter decendent selector apply on every p tag if it is inside a div tag */
+
+        /* Universal Selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* pseduo selector */
+        a:visited{
+            color: yellowgreen;
+        }
+        /* after visiting a link it's color become yellowgreen */
+
+        a:link{
+            color: violet;
+        }
+        /* a link colour by deafult is blue using a:link we mention that link colour will be violet */
+
+        a:active{
+            background-color: red;
+        }
+        /* when we click a link it bakground colour will become red */
+
+        a:hover{
+            background-color: aqua;
+        }
+        /* when we hover a link it bakground colour will become aqua */
+
+        p:first-child{
+            background-color: aquamarine;
+        }
+        /* where p tag is the first child of it's parent those tag background coloue will be changed */
+        
+    </style>
+</head>
+<body>
+    <h1>
+        <U>
+            SELECTORS IN CSS
+        </U>
+    </h1>
+    <p>CSS SELECTORS ALLOW US TO CHOOSE SPECIFIIC ELEMENTS AND APPLY STYLES TO THEM</p>
+
+    <div class="red">
+        i am a div element
+        <p>i'm a fisrt para inside div tag</p>
+        <p>i'm a second para inside div tag</p>
+    </div>
+
+    <div id="green">
+        i am another div element
+        <article>
+            <p>i'm a para inside div tag, which affect with decendent selector</p>
+        </article>
+    </div>
+
+    <!-- in the last div tag p tag is inside an article tag that's why child selector doesn't on this particular div -->
+
+    <!-- child selector works only if p tag directly under div tag then child selector worked -->
+
+     <a href="https://www.google.com">Go to Goole<a><br>
+     <a href="https://www.Facebook.com">Go to Goole</a>
+
+     <div class="one">
+        <p>i am an one</p>
+     </div>
+
+     <div class="resource">
+        <a href="https://www.w3schools.com/csSref/css_selectors.php">More Content On CSS Selector Reference</a>
+     </div>
+</body>
+</html>

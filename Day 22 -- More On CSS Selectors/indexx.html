@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More On CSS Selectors
+    </title>
+    <style>
+        /* .box:first-child -->> it means if box is parent first child then background color property will apply */
+        /* .box:first-child{
+            background-color: red;
+        } */
+
+        /* it means whatever element class is box there first line color wll be only changed */
+        /* .box::first-line{
+            color: rgb(4, 212, 240);
+        } */
+
+        /* it means under the boxes class every elemnt text color will be blueviolet */
+        /* .boxes *{
+            color: blueviolet;
+            border: 2px solid black;
+        } */
+
+        /* Attribute Selector -->> whenever data-color is primary */
+        /* [data-color="primary"]{
+            margin-top: 45px;
+            padding-top: 45px;
+        } */
+        
+        /* grouping of selectors */
+        /* p , a , .box , [data-color="primary"]{
+            margin-top: 45px;
+            padding-top: 45px;
+        } */
+
+        /* even childs background color will change whose class nae is box */
+        /* .box:nth-child(even){
+            background-color: burlywood;
+        } */
+
+        /* odd childs background color will change whose class nae is box */
+        /* .box:nth-child(odd){
+            background-color:chartreuse;
+        } */
+
+        /* from last it start count, as 1 which is counted that background will be changed */
+        /* .box:nth-last-child(1){
+            background-color:red;
+        } */
+
+        /* it will enter element dynamically in the page bafore any element */
+        .boxes::before{
+            content: "Harry Is Good";
+        }
+
+        /* it will enter element dynamically in the page after any element */
+        .boxes::after{
+            content: "web development is good";
+        }
+
+        /* this selection pseduo selector working when we select the content of box class, it chnnage the conntent coloue when the user select the content */
+        /* .box::selection{
+            color: rgb(209, 20, 121);
+        } */
+
+        /* ifwe write pseduo selecto selection like this the it will apply every element */
+        ::selection{
+            color: rgb(238, 229, 234);
+            background-color: rgb(173, 99, 203);
+        }
+
+        /* it make the all content first letter size big and change it's color to peru  */
+        .box::first-letter{
+            color: peru;
+            font-size: 45px;
+        }
+
+        input::placeholder{
+            color: rgb(230, 15, 126);
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid molestias fugiat suscipit soluta sed! Inventore dolores totam alias ea cupiditate quis quisquam aperiam suscipit, impedit fugit aliquam harum possimus porro quod atque eius molestias ratione provident voluptatem blanditiis beatae in? Voluptates, corporis reiciendis doloribus ut suscipit distinctio atque similique facilis maxime maiores laudantium dignissimos natus repellendus ipsa debitis omnis ratione voluptatibus voluptas quos possimus, nam voluptatem pariatur vero? Reprehenderit ipsam officia sequi excepturi quibusdam quos in minima, eligendi fuga fugiat! Sapiente veniam reiciendis qui natus, atque architecto voluptatem aliquam? Neque sed dolore, soluta explicabo autem fuga necessitatibus sint adipisci pariatur?</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laboriosam, modi odio, repudiandae vel tenetur totam debitis dignissimos fugiat iste doloremque quibusdam nesciunt dicta labore, alias quis accusantium possimus perferendis.</p>
+    </div>
+    <input type="text" placeholder="type your name here">
+</body>
+</html>

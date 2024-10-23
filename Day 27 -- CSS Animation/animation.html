@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .container{
+            background-color: rgb(71, 163, 62);
+            width: 30vw;
+            height: 80vh;
+        }
+        .box{
+            width: 34px;
+            height: 45px;
+             animation: ayananimation 2s ease-in-out 1s 1 ,
+                            identifier 3s ease-in-out 2s 1;
+            /* we can use two different animation @keyframes together using comma separated value */
+        }
+        @keyframes ayananimation {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow;
+            }
+        }
+
+        /* we can define ore than one animation @keyframes */
+        @keyframes identifier {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+
+    <div class="resources"></div>
+        <div><a href="https://www.w3schools.com/css/css3_animations.asp">CSS Animation</a></div>
+        <div><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">CSS Animation</a></div>
+        
+    </div>
+</body>
+</html>

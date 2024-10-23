@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 -- css</title>
+    <!-- (ctrl + Enter) press together on keyboard then go to next line -->
+    <style>
+        p{
+            background-color: blue;
+            color: white;
+        }
+
+        /* div p:first-child -->> it means under the div tag the 1st p tag background-color would be yellow and text color would be red */
+        div p:first-child{
+            background-color: yellow;
+            color: red;
+        }
+        /* div p:nth-child(2){
+            background-color: yellow;
+            color: red;
+        } */
+        /* div p:nth-child(2) -->> it means under the div tag the 2nd p tag background-color would be yellow and text color would be red */
+    </style>
+</head>
+<body>
+    <div>
+        <!-- write html and css code to style a paragraph inside a div which contain 5 other paragraphs. the first paragraph must have background color yellow and text color red. the other paragraph must have background color blue and the text color white. -->
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione similique delectus placeat deserunt. Maiores nemo illo soluta et praesentium sapiente dolore error numquam porro. Eveniet excepturi, consequatur expedita sint dolorum cum voluptate rem perspiciatis obcaecati dolores illum doloribus odio harum?
+        </p>
+
+        <p>
+            i am another para
+        </p>
+
+        <p>
+            i am also another para
+        </p>
+    </div>
+
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione similique delectus placeat deserunt. Maiores nemo illo soluta et praesentium sapiente dolore error numquam porro. Eveniet excepturi, consequatur expedita sint dolorum cum voluptate rem perspiciatis obcaecati dolores illum doloribus odio harum?
+        </p>
+
+        <p>
+            i am another para
+        </p>
+
+        <p>
+            i am also another para
+        </p>
+    </div>
+</body>
+</html>

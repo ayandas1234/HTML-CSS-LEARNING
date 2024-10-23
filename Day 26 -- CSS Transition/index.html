@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition Property</title>
+    <style>
+        .container{
+            background-color: aquamarine;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box{
+            background-color: cadetblue;
+            width: 5vw;
+            height: 4vh;
+            /* transition: transform; */
+            /* transition: all; */
+            transition: background-color , transform;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+
+            /* 
+            transition: ;
+            transition-duration: ;
+            transition-timing-function: ;
+            transition-delay: ; 
+            -->> this four property is the main transition property */
+
+            /* transition: transform; -->> over which property transition will be apply that propert name should be there */
+
+            /* transition-duration: 3s; -->> how much time should take for transiton */
+
+            /* transition-delay: 1s; -->> after how much time transition again wiill start */
+
+            /* transition-timing-function:ease-in-out; -->> this syntax is used for the animation part also to manipulate the animation how fast or how slow it will happen
+             */
+
+            /* transition: all; -->> it means all the property of the translate class will be apply  */
+
+            /* transition: background-color , transform; -->> this syntax here we mention particullary for which property will be applied for transition */
+
+            /* Now Without using separately transitio property we can use it together in a sigle line */
+            transition: all 3s ease-in-out 1s;
+            /* transition: all 3s ease-in-out 1s; -->> this syntax include all the four transition property 
+            transition: ;
+            transition-duration: ;
+            transition-timing-function: ;
+            transition-delay: ;
+            */
+
+            transition: all 3s cubic-bezier(0.86, 0.5, 0.48, 0.85) 1s;
+        }
+
+        .translate{
+            transform: translateX(10vh) translateY(10vh) scale(2);
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate">
+
+        </div>
+    </div>
+    <div class="resources"></div>
+        <div><a href="https://www.w3schools.com/css/css3_transitions.asp">CSS Transitions</a></div>
+        <div><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">CSS Transitions</a></div>
+        
+    </div>
+</body>
+</html>

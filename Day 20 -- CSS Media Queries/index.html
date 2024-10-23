@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        body{
+            background-color: red;
+        }
+
+        @media only screen and (max-width: 455px){
+            body{
+                background-color: blue;
+            }
+
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        /* @media only screen and (min-width: 455px){
+            body{
+                background-color: blue;
+            }
+        } */
+
+
+        /* max-width: 455px -->> means when screen size become lower than 455px it's background become blue */
+        /* min-width: 455px -->> means when screen size become larger than 455px it's background become blue */
+
+        /* media query synatx-->> */
+        /* @media not | only mediatype and (expression){
+            css-code;
+        } */
+
+        .boxes{
+            display: flex;
+        }
+
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            padding: 3px;
+            margin: 3px;
+        }
+
+        /* @media screen and (orientation:landscape){
+            body{
+                border: 5px solid mediumspringgreen;
+            }
+        } */
+        /* when page will be in landscape mode then around body there will be a border showing but when it is no longer in landscape mode border will not be showing */
+
+        @media screen and (orientation:portrait){
+            body{
+                border: 5px solid mediumspringgreen;
+            }
+        }
+        /* when page will be in no longer in landscape mode then around body there will be a border showing */
+    </style>
+</head>
+<body>
+    <div>
+        hey i am a red body guy !
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

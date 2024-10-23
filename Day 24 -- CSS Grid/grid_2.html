@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Naming Vertical And Horizontal Lines</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: [first_col_line] 120px [second_col_line] 100px [third_col_line];
+            /* grid-template-columns: [name_of_column] size [name_of_column] size [name_of_column]; -->> we can mention the name of every sigle line of column, also remember that if there is two column then lines would be three then there should be three name but two sizes */
+
+
+
+            grid-template-rows: [first_row_line] 100px [second_row_line] 100px [third_row_line] 100px [fourth_row_line];
+            /* grid-template-rows: [name_of_row] size [name_of_row] size [name_of_row] size [name_of_row]; -->> this way we can mention the name of every sigle line of row, also remember that if there is three row then lines would be four then there should be four name but three sizes */
+        }
+
+        .items{
+            border: 2px solid red;
+            height: 55px;
+            /* width: 55px; */
+        }
+
+        .item-4{
+            /* grid-row: 1/2; */
+
+            /* grid-row: first_row_line/2; */
+            /* we can mention the row start and end in mix format of name and number -->> grid-row: first_row_line/2; */
+
+            grid-row: first_row_line/second_row_line;
+            /* we can mention the row start and end in only naing formmat also */
+
+
+            /* grid-column: 1/2; */
+
+            
+            /* grid-column: 1/t; */
+            /* /* we can mention the column start and end in mix format of name and number -->> grid-column: 1/t; */
+
+
+            grid-column: first_col_line/third_col_line;
+            /* we can mention the column start and end in only naing formmat also */
+        }
+
+        .item-1{
+            grid-row: 1/2;
+            grid-column: 1/2;
+            /* in this code we didn't give items width that's why it will stretch out totally in the respective grid */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item-1">1</div>
+        <div class="items item-2">2</div>
+        <div class="items item-3">3</div>
+        <div class="items item-4">4</div>
+        <div class="items item-5">5</div>
+    </div>
+
+    <div>
+        <h1>
+            CSS Grid Naming Vertical And Horizontal Lines
+        </h1>
+    </div>
+</body>
+</html>
